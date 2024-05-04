@@ -12,10 +12,6 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class UserController {
 
-
-//    @Autowired
-//    private UserRepository userRepository;
-
     private UserServiceImpl userServiceImpl;
 
     @GetMapping("/users/{id}")
