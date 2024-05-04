@@ -13,11 +13,16 @@ import java.util.Optional;
 // implements indicates that a class implements an interface, which sets a blueprint for classes to follow
 // for example, a circle class implements shape interface and must then provide a set of methods from shape
 
-@Service
+@Service(value = "userService")
 public class UserServiceImpl implements UserService{
 
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
+//    @Autowired
+//    BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Bean
+    public BCryptPasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     // autowired annotation refers to automatic dependency injection, which means spring boot automatically injects the dependencies needed for this object without you needing to add boilerplate code
     // here we autowire the repository layer to use it to perform data access and retrieval actions
@@ -55,7 +60,7 @@ public class UserServiceImpl implements UserService{
     public User save(UserDTO userDTO) {
         User newUser = new User();
         newUser.setEmail(userDTO.getEmail());
-        newUser.setPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
+        newUser.setPassword(encoder().encode(userDTO.getPassword()));
         newUser.setFirstname(userDTO.getFirstname());
         newUser.setLastname(userDTO.getLastname());
 
