@@ -9,6 +9,8 @@ import java.util.Optional;
 // A repository typically provides CRUD operations for working with data from a database
 // By extending JpaRepository, the UserRepository inherits CRUD operation methods such as save, findById, delete etc
 
+// anything related to storage/retrieval goes here e.g. findById, findByEmail, saveUser etc
+// this works closely with the service layer as the service layer will provide one-up functions that utilize the repository behind the hood to perform data retrieval and access actions
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
 

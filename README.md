@@ -36,4 +36,3 @@ Controllers are annotated with @Controller. They handle the REST API portion.
     * @RestController and @RequestMapping annotations
 4. Validation
     * Implement input validation to ensure that data is accurate and secure.
-# javaflow
