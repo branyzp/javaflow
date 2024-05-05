@@ -1,17 +1,13 @@
 package dev.branyzp.flow.user;
 
-import dev.branyzp.flow.api.ApiResponse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,8 +17,6 @@ import java.util.Optional;
 @Service(value = "userService")
 public class UserServiceImpl implements UserService{
 
-//    @Autowired
-//    BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Bean
     public BCryptPasswordEncoder encoder() {

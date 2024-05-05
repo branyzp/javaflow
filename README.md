@@ -27,6 +27,15 @@ Spring Data JPA and Hibernate are commonly used for data persistence.
 Controllers are annotated with @Controller. They handle the REST API portion.
 ![img_1.png](img_1.png)
 
+### What are Spring Beans?
+- Spring beans are java objects that are managed by the Spring IoC container.
+- IoC stands for Inversion of Control, that is, if you have an object which requires another object to function properly, Spring handles the relationships (dependencies) between these objects instead of handling it yourself.
+
+### Annotations
+#### @Autowired - tells spring to go look in its context for that specific bean
+#### @
+
+
 ### Best Practices
 1. Keep Controllers Thin
     * Controllers should focus on handling requests and managing the interactions between the Model and View. Do not place business logic in controllers.
