@@ -8,6 +8,8 @@ import java.util.List;
 public interface UserService {
 
     // here we just list out the various methods, we will implement the methods in the service implementation layer
+    List<User> seedUsers();
+
     User save(UserDTO user);
 
     List<User> findAll();

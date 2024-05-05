@@ -16,6 +16,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/seed")
+    public ApiResponse<List<User>> seed() {
+        return new ApiResponse<>(HttpStatus.OK.value(),"Users seeded successfully",userService.seedUsers());
+    }
+
     @PostMapping("/register")
     public ApiResponse<User> saveUser(@RequestBody UserDTO userDTO) {
         return new ApiResponse<>(HttpStatus.OK.value(),"User saved successfully",userService.save(userDTO));

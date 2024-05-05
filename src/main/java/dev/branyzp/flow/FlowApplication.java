@@ -18,21 +18,21 @@ public class FlowApplication {
 		SpringApplication.run(FlowApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner runner(UserRepository userRepository){
-		return args->{
-			User user = new User();
-			user.setFirstname("Brandon");
-			user.setLastname("Yeo");
-			user.setEmail("branyzp@gmail.com");
-			user.setPassword("fvgbhn45");
-			user.setCreatedDt(LocalDate.now());
-			user.setUserId(1L);
-
-			userRepository.save(user);
-			User savedUser = userRepository.findById(user.getUserId()).orElseThrow(NoSuchElementException::new);
-			System.out.println(savedUser);
-		};
-	}
+//	@Bean
+//	CommandLineRunner runner(UserRepository userRepository){
+//		return args->{
+//			User user = new User();
+//			user.setFirstname("Brandon");
+//			user.setLastname("Yeo");
+//			user.setEmail("branyzp@gmail.com");
+//			user.setPassword("fvgbhn45");
+//			user.setCreatedDt(LocalDate.now());
+//			user.setUserId(1L);
+//
+//			userRepository.save(user);
+//			User savedUser = userRepository.findById(user.getUserId()).orElseThrow(NoSuchElementException::new);
+//			System.out.println(savedUser);
+//		};
+//	}
 
 }
