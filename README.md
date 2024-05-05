@@ -29,7 +29,9 @@ Controllers are annotated with @Controller. They handle the REST API portion.
 
 ### What are Spring Beans?
 - Spring beans are java objects that are managed by the Spring IoC container.
+- To be specific, they are an instance of a class managed by the Spring Container.
 - IoC stands for Inversion of Control, that is, if you have an object which requires another object to function properly, Spring handles the relationships (dependencies) between these objects instead of handling it yourself.
+- The Spring Container also performs dependency injection which means that it ensures that the instances are at the right place and right time.
 
 ### Annotations
 #### @Autowired - tells spring to go look in its context for that specific bean
